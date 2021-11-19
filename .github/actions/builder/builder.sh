@@ -6,7 +6,7 @@ set -o pipefail
 docker build -t tmp - <<'EOF'
 FROM debian:11-slim as builder
 RUN sed -i -re 's#http://deb.debian.org/#http://ftp.jp.debian.org/#g' /etc/apt/sources.list \
-    && apt-get update && apt-get install -y --no-install-recommends git make gcc libc-dev \
+    && apt-get update && apt-get install -y --no-install-recommends git make gcc libc-dev ca-certificates \
     && git clone https://github.com/ncopa/su-exec.git /su-exec && cd /su-exec && make CC=gcc CFLAGS="-O -g -Wall -Werror" \
     && cp -p /su-exec/su-exec /usr/local/bin/su-exec
 
