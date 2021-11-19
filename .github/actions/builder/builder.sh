@@ -33,5 +33,5 @@ EOF
 
 docker run --rm -i tmp tar zpc --exclude=/etc/hostname --exclude=/etc/resolv.conf --exclude=/etc/hosts --one-file-system / >rootfs.tar.gz
 
-docker run --rm -ti tmp uname -a
+docker run --rm -i tmp uname -a
 
