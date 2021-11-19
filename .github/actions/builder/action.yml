@@ -11,3 +11,7 @@ runs:
       name: builder
       run: ./.github/actions/builder/builder.sh
       shell: bash
+    - 
+      name: commit
+      uses: stefanzweifel/git-auto-commit-action@v4
+      push_options: --force
