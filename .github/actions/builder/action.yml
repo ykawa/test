@@ -1,0 +1,13 @@
+name: 'build docker'
+description: 'Generate a lightweight docker image.'
+runs:
+  using: 'composite'
+  steps:
+    -
+      run: ./.github/actions/builder/builder.sh
+      shell: bash
+
+        #    - 
+        #      name: commit
+        #      uses: stefanzweifel/git-auto-commit-action@v4
+
