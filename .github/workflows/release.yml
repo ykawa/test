@@ -21,12 +21,10 @@ jobs:
         archtec: [amd64, arm64]
 
     steps:
-      -
-        name: Checkout repository
+      - name: Checkout repository
         uses: actions/checkout@v2
 
-      -
-        name: build small docker image
+      - name: build small docker image
         uses: ./.github/actions/builder
 
           #      - name: Log into registry ${{ env.REGISTRY }}
