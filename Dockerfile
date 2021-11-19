@@ -1,3 +1,1 @@
-FROM debian:11-slim
-
-
+FROM scratch

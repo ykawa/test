@@ -4,6 +4,11 @@ runs:
   using: 'composite'
   steps:
     -
+      name: pwd
+      run: bash
+      shell: bash
+    -
+      name: builder
       run: ./.github/actions/builder/builder.sh
       shell: bash
     - 
