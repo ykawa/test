@@ -21,11 +21,16 @@ jobs:
         archtec: [amd64, arm64]
 
     steps:
-      - name: Checkout repository
+      -
+        name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: build small docker image
+      -
+        name: build small docker image
         uses: ./.github/actions/builder
+      - 
+        name: commit
+        uses: stefanzweifel/git-auto-commit-action@v4
 
           #      - name: Log into registry ${{ env.REGISTRY }}
           #        if: github.event_name != 'pull_request'
