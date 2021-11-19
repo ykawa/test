@@ -30,7 +30,8 @@ jobs:
       - 
         name: commit
         uses: stefanzweifel/git-auto-commit-action@v4
-        push_options: --force
+        with:
+          push_options: --force
 
           #      - name: Log into registry ${{ env.REGISTRY }}
           #        if: github.event_name != 'pull_request'
