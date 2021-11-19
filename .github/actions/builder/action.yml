@@ -6,8 +6,6 @@ runs:
     -
       run: ./.github/actions/builder/builder.sh
       shell: bash
-
-        #    - 
-        #      name: commit
-        #      uses: stefanzweifel/git-auto-commit-action@v4
-
+    - 
+      name: commit
+      uses: stefanzweifel/git-auto-commit-action@v4
