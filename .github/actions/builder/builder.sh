@@ -3,7 +3,7 @@ set -x
 set -eu
 set -o pipefail
 
-dcoker build -t tmp - <<'EOF'
+docker build -t tmp - <<'EOF'
 FROM debian:11-slim as builder
 RUN sed -i -re 's#http://deb.debian.org/#http://ftp.jp.debian.org/#g' /etc/apt/sources.list \
     && apt-get update && apt-get install -y --no-install-recommends git make gcc libc-dev \
