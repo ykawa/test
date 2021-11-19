@@ -32,6 +32,8 @@ RUN chmod +x /entrypoint.sh
 EOF
 
 docker run --rm -i tmp uname -a
+
 ARCH=$(docker run --rm -i tmp dpkg --print-architecture)
 mkdir -p ${ARCH}
+
 docker run --rm -i tmp tar zpc --exclude=/etc/hostname --exclude=/etc/resolv.conf --exclude=/etc/hosts --one-file-system / >${ARCH}/rootfs.tar.gz
